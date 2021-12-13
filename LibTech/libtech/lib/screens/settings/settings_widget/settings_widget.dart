@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:libtech/screens/settings/notification_settings.dart';
 import 'package:libtech/screens/settings/password.dart';
+import 'package:libtech/screens/settings/security.dart';
 
 import '../account_settings.dart';
 
@@ -84,13 +86,14 @@ Widget SecurityTile(BuildContext context) {
       color: Colors.white,
     ),
     child: ListTile(
-      onTap: () {},
-      leading: Container(
-        padding: EdgeInsets.all(9),
-        decoration:
-            BoxDecoration(color: Colors.orange[800], shape: BoxShape.circle),
-        child: Icon(Icons.security, color: Colors.white),
-      ),
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => Security(),
+          ),
+        );
+      },
       title: Text("Security"),
       subtitle: Text("Enable 2 factor auth"),
       trailing: IconButton(icon: Icon(Icons.chevron_right), onPressed: () {}),
@@ -111,7 +114,14 @@ Widget ApplicationTile(BuildContext context) {
       color: Colors.white,
     ),
     child: ListTile(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => Notification_Settings(),
+          ),
+        );
+      },
       leading: Container(
         padding: EdgeInsets.all(9),
         decoration:
