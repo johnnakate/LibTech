@@ -25,7 +25,7 @@ class _DashboardState extends State<Dashboard> {
       //         IconButton(onPressed: () => {}, icon: Icon(Icons.notifications)),
       //       ],
       //   ),
-        body: SingleChildScrollView(
+      body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         //height: 1100,
         //width: double.infinity,
@@ -36,6 +36,44 @@ class _DashboardState extends State<Dashboard> {
             clickContainer(),
             SizedBox(height: 15),
             todayText(),
+            DataTable(
+              columns: [
+                DataColumn(
+                    label: Text('Name',
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.bold))),
+                DataColumn(
+                    label: Text('Type',
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.bold))),
+                DataColumn(
+                    label: Text('Date',
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.bold))),
+              ],
+              rows: [
+                DataRow(cells: [
+                  DataCell(Text('1')),
+                  DataCell(Text('Stephen')),
+                  DataCell(Text('Actor')),
+                ]),
+                DataRow(cells: [
+                  DataCell(Text('5')),
+                  DataCell(Text('John')),
+                  DataCell(Text('Student')),
+                ]),
+                DataRow(cells: [
+                  DataCell(Text('10')),
+                  DataCell(Text('Harry')),
+                  DataCell(Text('Leader')),
+                ]),
+                DataRow(cells: [
+                  DataCell(Text('15')),
+                  DataCell(Text('Peter')),
+                  DataCell(Text('Scientist')),
+                ]),
+              ],
+            ),
             todayCard(context),
             upcomingText(),
             upcomingCard(),
@@ -87,10 +125,10 @@ Widget dashboardText() {
       //   ),
       //),
       Image.asset(
-              "assets/images/logo.png",
-              fit: BoxFit.contain,
-              height: 30,
-            ),
+        "assets/images/logo.png",
+        fit: BoxFit.contain,
+        height: 30,
+      ),
       SizedBox(height: 16),
     ],
   );
@@ -258,7 +296,7 @@ Widget todayText() {
     children: <Widget>[
       SizedBox(height: 24),
       Text(
-        "Today",
+        "My Reservations",
         style: TextStyle(
           color: Colors.black,
           fontWeight: FontWeight.bold,
@@ -359,14 +397,14 @@ Widget clickContainer() {
             ]),
             Column(children: <Widget>[
               Text(
-                "0",
+                "12",
                 style: TextStyle(
                   color: Colors.white,
                 ),
               ),
               SizedBox(height: 3),
               Text(
-                "Cancelled",
+                "Total",
                 style: TextStyle(
                   color: Colors.grey[300],
                 ),
@@ -381,7 +419,7 @@ Widget clickContainer() {
               ),
               SizedBox(height: 3),
               Text(
-                "Warnings",
+                "Cancelled",
                 style: TextStyle(
                   color: Colors.grey[300],
                 ),

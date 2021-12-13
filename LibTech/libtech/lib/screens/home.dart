@@ -35,7 +35,7 @@
 import 'package:flutter/material.dart';
 import 'package:libtech/screens/booking/components/seat_selector.dart';
 import 'package:libtech/screens/currentres.dart';
-import 'package:libtech/screens/profile.dart';
+import 'package:libtech/screens/analytics.dart';
 import 'package:libtech/screens/addreservation.dart';
 import 'package:libtech/screens/settings.dart';
 import 'package:libtech/screens/tour.dart';
@@ -55,7 +55,8 @@ class _HomeState extends State<Home> {
   int currentTab = 0;
   final List<Widget> screens = [
     Dashboard(),
-    Profile(),
+    //Profile(),
+    Analytics(),
     AddReservation(),
     MainPage(),
     Tour(),
@@ -111,14 +112,14 @@ class _HomeState extends State<Home> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Icon(
-                          Icons.home,
+                          Icons.dashboard, //dashboard
                           color: currentTab == 0
                               ? Colors.orange[900]
                               : Colors.grey,
                         ),
                         Text(
                           //Dashboard
-                          'Home',
+                          'Dashboard',
                           style: TextStyle(
                             color: currentTab == 0
                                 ? Colors.orange[900]
@@ -133,7 +134,7 @@ class _HomeState extends State<Home> {
                     onPressed: () {
                       setState(() {
                         currentScreen =
-                            Profile(); // if user taps on this dashboard tab will be active
+                            Analytics(); // if user taps on this it will be redirected to anlytics
                         currentTab = 1;
                       });
                     },
@@ -141,14 +142,14 @@ class _HomeState extends State<Home> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
                         Icon(
-                          Icons.search,
+                          Icons.analytics,
                           color: currentTab == 1
                               ? Colors.orange[900]
                               : Colors.grey,
                         ),
                         Text(
                           //Profile
-                          'Search',
+                          'Analytics',
                           style: TextStyle(
                             color: currentTab == 1
                                 ? Colors.orange[900]
@@ -209,14 +210,14 @@ class _HomeState extends State<Home> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
                         Icon(
-                          Icons.person,
+                          Icons.settings,
                           color: currentTab == 3
                               ? Colors.orange[900]
                               : Colors.grey,
                         ),
                         Text(
                           //Settings
-                          'Me',
+                          'Settings',
                           style: TextStyle(
                             color: currentTab == 3
                                 ? Colors.orange[900]

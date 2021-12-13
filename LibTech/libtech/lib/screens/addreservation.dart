@@ -77,9 +77,6 @@ class _AddReservationState extends State<AddReservation> {
       ),
       body: Padding(
         padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
-        //  children: [
-        // Image.asset('assets/images/discussionRoom.jpg'),
-        // ],
         child: Row(
           children: <Widget>[
             Expanded(
