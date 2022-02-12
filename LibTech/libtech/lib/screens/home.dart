@@ -18,7 +18,7 @@
 //                 style: TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
 //               ),
 //               const SizedBox(height: 24),
-//               ButtonWidget(
+//               idget(
 //                 text: 'Go Back',
 //                 onClicked: () => goToOnBoarding(context),
 //               ),
@@ -33,10 +33,12 @@
 // }
 
 import 'package:flutter/material.dart';
-import 'package:libtech/screens/booking/components/seat_selector.dart';
-import 'package:libtech/screens/currentres.dart';
+//import 'package:libtech/screens/booking/components/seat_selector.dart';
+//import 'package:libtech/screens/currentres.dart';
 import 'package:libtech/screens/analytics.dart';
-import 'package:libtech/screens/addreservation.dart';
+//import 'package:libtech/screens/addreservation.dart';
+import 'package:libtech/screens/reservation/type.dart';
+
 import 'package:libtech/screens/settings.dart';
 import 'package:libtech/screens/tour.dart';
 import 'package:libtech/screens/dashboard.dart';
@@ -57,7 +59,8 @@ class _HomeState extends State<Home> {
     Dashboard(),
     //Profile(),
     Analytics(),
-    AddReservation(),
+    ReservationType(),
+    //AddReservation(),
     MainPage(),
     Tour(),
     Settings(),
@@ -83,7 +86,8 @@ class _HomeState extends State<Home> {
           Navigator.push(
             context,
             //MaterialPageRoute(builder: (context) => SeatSelector()),
-            MaterialPageRoute(builder: (context) => MainPage()),
+            //MaterialPageRoute(builder: (context) => MainPage()),
+            MaterialPageRoute(builder: (context) => ReservationType()),
           );
         },
       ),

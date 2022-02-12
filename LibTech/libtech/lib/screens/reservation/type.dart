@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:libtech/screens/settings/settings_widget/settings_widget.dart';
 import 'package:libtech/screens/text_widgets/account_text.dart';
+//import 'package:libtech/widget/card_widget/card_type.dart';
+import 'package:libtech/widget/reservation/room_reservation_card.dart';
+import 'package:libtech/widget/reservation/seat_reservation_card.dart';
 
-class Account extends StatefulWidget {
-  //const Account({ Key? key }) : super(key: key);
+class ReservationType extends StatefulWidget {
+  //const ReservationType({ Key? key }) : super(key: key);
 
   @override
-  _AccountState createState() => _AccountState();
+  _ReservationTypeState createState() => _ReservationTypeState();
 }
 
-class _AccountState extends State<Account> {
+class _ReservationTypeState extends State<ReservationType> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,9 +35,13 @@ class _AccountState extends State<Account> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 5),
-            accountText("Account Settings"),
-            AccountForm(context)
+            accountText("Choose Reservation Type"),
+            //AccountForm(context)
             //weeklyChart(),
+            // ListView.builder(itemBuilder: (BuildContext context, int index) {  },),
+            SeatButton(),
+            SizedBox(height: 5),
+            RoomButton(),
           ],
         ),
       ),

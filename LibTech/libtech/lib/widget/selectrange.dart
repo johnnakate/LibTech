@@ -71,19 +71,6 @@ class _TimePickerWidgetState extends State<TimePickerWidget1> {
     }
   }
 
-  void _startHourChanged(TimeOfDay hour) {
-    setState(() => startTime = hour);
-    if (endTime != null) {
-      if (endTime.inMinutes() <= startTime.inMinutes() ||
-          (endTime.inMinutes() - startTime.inMinutes()) != 0) {
-        endTime = null;
-        widget.onRangeCompleted(null);
-      } else {
-        widget.onRangeCompleted(TimeRangeResult(startTime, endTime));
-      }
-    }
-  }
-
   void _endHourChanged(TimeOfDay hour) {
     setState(() => endTime = hour);
     widget.onRangeCompleted(TimeRangeResult(startTime, endTime));

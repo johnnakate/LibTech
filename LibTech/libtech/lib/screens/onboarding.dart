@@ -4,7 +4,6 @@ import 'package:introduction_screen/introduction_screen.dart';
 import 'package:libtech/widget/button_widget.dart';
 import 'package:libtech/screens/login.dart';
 
-
 class OnBoarding extends StatelessWidget {
   @override
   Widget build(BuildContext context) => SafeArea(
@@ -34,6 +33,7 @@ class OnBoarding extends StatelessWidget {
               footer: ButtonWidget(
                 text: 'Continue',
                 onClicked: () => goToHome(context),
+                title: '',
               ),
               image: buildImage('assets/images/onboarding_two.jpg'),
               decoration: getPageDecoration(),

@@ -53,24 +53,19 @@ class _DashboardState extends State<Dashboard> {
               ],
               rows: [
                 DataRow(cells: [
-                  DataCell(Text('1')),
-                  DataCell(Text('Stephen')),
-                  DataCell(Text('Actor')),
+                  DataCell(Text('Discussion Room #2')),
+                  DataCell(Text('Room')),
+                  DataCell(Text('06-21-2022')),
                 ]),
                 DataRow(cells: [
-                  DataCell(Text('5')),
-                  DataCell(Text('John')),
-                  DataCell(Text('Student')),
+                  DataCell(Text('Discussion Room #3')),
+                  DataCell(Text('Room')),
+                  DataCell(Text('06-21-2022')),
                 ]),
                 DataRow(cells: [
-                  DataCell(Text('10')),
-                  DataCell(Text('Harry')),
-                  DataCell(Text('Leader')),
-                ]),
-                DataRow(cells: [
-                  DataCell(Text('15')),
-                  DataCell(Text('Peter')),
-                  DataCell(Text('Scientist')),
+                  DataCell(Text('Pitch Room')),
+                  DataCell(Text('Room')),
+                  DataCell(Text('08-21-2022')),
                 ]),
               ],
             ),

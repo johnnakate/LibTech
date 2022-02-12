@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_settings_screens/flutter_settings_screens.dart';
 import 'package:libtech/screens/settings/account_settings.dart';
 import 'package:libtech/screens/settings/application.dart';
 import 'package:libtech/screens/settings/notification_settings.dart';
@@ -43,21 +44,103 @@ class _SettingsState extends State<Settings> {
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-        //height: 1100,
-        //width: double.infinity,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SizedBox(height: 5),
-            AccountTile(context),
-            PasswordTile(context),
-            SecurityTile(context),
-            ApplicationTile(context),
-            NotificationTile(context),
-            //weeklyChart(),
-          ],
-        ),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          SizedBox(height: 40),
+
+          Row(
+            children: [
+              Icon(
+                Icons.person,
+                color: Colors.orange,
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              Text("Profile and Account Settings",
+                  style: TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                  )),
+            ],
+          ),
+          Divider(
+            height: 20,
+            thickness: 1,
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          // buildAccountOption(context, "Profile"),
+          // buildAccountOption(context, "Recent Activity"),
+          AccountTile(context),
+          PasswordTile(context),
+          SizedBox(
+            height: 10,
+          ),
+          Row(
+            children: [
+              Icon(
+                Icons.person,
+                color: Colors.orange,
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              Text("Others",
+                  style: TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                  )),
+            ],
+          ),
+          Divider(
+            height: 20,
+            thickness: 1,
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          SecurityTile(context),
+          ApplicationTile(context),
+          NotificationTile(context),
+        ]),
       ),
     );
   }
 }
+
+GestureDetector buildAccountOption(BuildContext context, String title) {
+  return GestureDetector(
+    onTap: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => Account(),
+        ),
+      );
+    },
+    child: Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 20),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            title,
+            style: TextStyle(
+                fontSize: 20, fontWeight: FontWeight.w500, color: Colors.black),
+          ),
+          Icon(
+            Icons.chevron_right,
+            color: Colors.grey,
+          )
+        ],
+      ),
+    ),
+  );
+}
+
+// Widget buildLogout()=> SimpleSettingsTile(
+//   title: 'Logout',
+//   subtitle:'',
+//   leading: IconWidget(icon:Icons.logout,color:Colors.blue),
+//   onTap: ()=> Utils.showSnackBar(context, 'Logout'),);

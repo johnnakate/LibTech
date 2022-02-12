@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-Widget accountText() {
+Widget accountText(String title) {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: <Widget>[
       SizedBox(height: 24),
       Text(
-        "Account Settings",
+        title,
         style: TextStyle(
           color: Colors.black,
           fontWeight: FontWeight.bold,

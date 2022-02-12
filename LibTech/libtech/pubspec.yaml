@@ -42,6 +42,7 @@ dependencies:
   rubber: ^0.4.0
 
   flutter_sparkline: "^0.1.0"
+  flutter_settings_screens: ^0.2.2+1
 
 dev_dependencies:
   time_range_picker: any

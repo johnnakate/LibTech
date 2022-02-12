@@ -175,3 +175,147 @@ Widget NotificationTile(BuildContext context) {
     ),
   );
 }
+
+// account settings widget
+
+Widget AccountForm(BuildContext context) {
+  return Column(
+    children: [
+      Container(
+        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+        child: TextFormField(
+          style: TextStyle(
+            color: Theme.of(context).primaryColor,
+            fontWeight: FontWeight.bold,
+            fontSize: 22,
+          ),
+          decoration: InputDecoration(
+              //border: InputBorder.none,
+              border: OutlineInputBorder(),
+              prefixIcon: Icon(Icons.person, size: 30),
+              labelText: "FIRSTNAME",
+              labelStyle: TextStyle(
+                fontSize: 18,
+                color: Colors.grey[400],
+                fontWeight: FontWeight.w800,
+              )),
+        ),
+      ),
+      SizedBox(
+        height: 10,
+      ),
+      Container(
+        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+        child: TextFormField(
+          style: TextStyle(
+            color: Theme.of(context).primaryColor,
+            fontWeight: FontWeight.bold,
+            fontSize: 22,
+          ),
+          decoration: InputDecoration(
+              //border: InputBorder.none,
+              border: OutlineInputBorder(),
+              prefixIcon: Icon(Icons.person, size: 30),
+              labelText: "LASTNAME",
+              labelStyle: TextStyle(
+                fontSize: 18,
+                color: Colors.grey[400],
+                fontWeight: FontWeight.w800,
+              )),
+        ),
+      ),
+      SizedBox(
+        height: 10,
+      ),
+      Container(
+        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+        child: TextFormField(
+          style: TextStyle(
+            color: Theme.of(context).primaryColor,
+            fontWeight: FontWeight.bold,
+            fontSize: 22,
+          ),
+          decoration: InputDecoration(
+              //border: InputBorder.none,
+              border: OutlineInputBorder(),
+              prefixIcon: Icon(Icons.mail, size: 30),
+              labelText: "EMAIL",
+              labelStyle: TextStyle(
+                fontSize: 18,
+                color: Colors.grey[400],
+                fontWeight: FontWeight.w800,
+              )),
+        ),
+      ),
+      SizedBox(
+        height: 10,
+      ),
+      Container(
+        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+        child: TextFormField(
+          style: TextStyle(
+            color: Theme.of(context).primaryColor,
+            fontWeight: FontWeight.bold,
+            fontSize: 22,
+          ),
+          decoration: InputDecoration(
+              //border: InputBorder.none,
+              border: OutlineInputBorder(),
+              prefixIcon: Icon(Icons.phone, size: 30),
+              labelText: "PHONE NUMBER",
+              labelStyle: TextStyle(
+                fontSize: 18,
+                color: Colors.grey[400],
+                fontWeight: FontWeight.w500,
+              )),
+        ),
+      ),
+      SizedBox(
+        height: 10,
+      ),
+      Container(
+        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+        child: TextFormField(
+          style: TextStyle(
+            color: Theme.of(context).primaryColor,
+            fontWeight: FontWeight.bold,
+            fontSize: 22,
+          ),
+          decoration: InputDecoration(
+              //border: InputBorder.none,
+              border: OutlineInputBorder(),
+              prefixIcon: Icon(Icons.admin_panel_settings, size: 30),
+              labelText: "ACCOUNT ROLE",
+              labelStyle: TextStyle(
+                fontSize: 18,
+                color: Colors.grey[400],
+                fontWeight: FontWeight.w500,
+              )),
+        ),
+      ),
+    ],
+  );
+}
+
+// Widget InputField( Icons Icons.icon, String title, BuildContext context){
+//   return Container(
+//         padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+//         child: TextFormField(
+//           style: TextStyle(
+//             color: Theme.of(context).primaryColor,
+//             fontWeight: FontWeight.bold,
+//             fontSize: 22,
+//           ),
+//           decoration: InputDecoration(
+//               //border: InputBorder.none,
+//               border: OutlineInputBorder(),
+//               prefixIcon: Icon(icon, size: 30),
+//               labelText: title,
+//               labelStyle: TextStyle(
+//                 fontSize: 18,
+//                 color: Colors.grey[400],
+//                 fontWeight: FontWeight.w500,
+//               )),
+//         ),
+//       ),
+// }
